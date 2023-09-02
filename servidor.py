@@ -25,16 +25,11 @@ while True:
     route = extract_route(request)
     filepath = CUR_DIR / route
     if filepath.is_file():
-        print("passou1")
         response = build_response() + read_file(filepath)
     elif route == '':
         response = index(request)
-        print("passou2")
-        print(response)
     else:
         response = build_response(code = '404', reason = 'Not Found')
-        print("passou3")
-        print(response)
     client_connection.sendall(response)
 
     client_connection.close()

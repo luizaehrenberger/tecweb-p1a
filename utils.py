@@ -12,6 +12,7 @@ def load_data():
     db = Database('banco')
     return db.get_all()
 
+
 def load_template(template):
     with open("templates/" + template, 'r', encoding='utf-8') as archive:
         html = archive.read()

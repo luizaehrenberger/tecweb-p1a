@@ -6,7 +6,7 @@ import urllib.parse
 
 def index(request):
     db = Database('data/banco')
-    # A string de request sempre começa com o tipo da requisição (ex: GET, POST)
+    
     if request.startswith('POST'):
         partes = request.split('\n\r\n')
         print(partes)
